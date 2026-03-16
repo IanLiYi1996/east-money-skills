@@ -1,0 +1,20 @@
+{
+  "name": "east-money-skills",
+  "owner": {
+    "name": "IanLiYi1996"
+  },
+  "metadata": {
+    "description": "East Money MiaoXiang Financial Skills",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "MX_Skills",
+      "description": "East Money MiaoXiang financial data skills for Chinese market data query, stock screening, news search, and macro economic data",
+      "source": "./",
+      "skills": [
+        "./skills/MX_Skills"
+      ]
+    }
+  ]
+}
