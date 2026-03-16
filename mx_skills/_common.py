@@ -23,7 +23,8 @@ def get_api_key() -> str:
     if not key:
         raise RuntimeError(
             "EM_API_KEY environment variable is not set.\n"
-            "Please configure it before running:\n"
+            "Get your API key from: https://ai.eastmoney.com/chat\n"
+            "Then configure it:\n"
             "  export EM_API_KEY=\"your_em_api_key\""
         )
     return key

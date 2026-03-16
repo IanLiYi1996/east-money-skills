@@ -41,7 +41,7 @@ metadata:
 # 安装
 pip install git+https://github.com/IanLiYi1996/east-money-skills.git
 
-# 配置 API Key（必填，从东方财富官网获取）
+# 配置 API Key（必填，从 https://ai.eastmoney.com/chat 获取）
 export EM_API_KEY="your_em_api_key"
 ```
 

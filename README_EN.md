@@ -17,7 +17,7 @@ A collection of financial data skills powered by **East Money MiaoXiang AI API**
 # Install
 pip install git+https://github.com/IanLiYi1996/east-money-skills.git
 
-# Configure API Key
+# Configure API Key (get it from https://ai.eastmoney.com/chat)
 export EM_API_KEY="your_em_api_key"
 
 # Search financial news

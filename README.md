@@ -29,7 +29,7 @@ pip install "mx-skills[all] @ git+https://github.com/IanLiYi1996/east-money-skil
 export EM_API_KEY="your_em_api_key"
 ```
 
-> 请从东方财富官网获取 API Key
+> 请从 [https://ai.eastmoney.com/chat](https://ai.eastmoney.com/chat) 获取 API Key
 
 ### 3. 使用示例
 
