@@ -142,11 +142,13 @@ print(result["csv_path"])
 本项目同时提供 OpenClaw/Claude Code 兼容的 Skill 定义，位于 `skills/` 目录：
 
 ```
-skills/
-├── MX_FinSearch/SKILL.md
-├── MX_FinData/SKILL.md
-├── MX_MacroData/SKILL.md
-└── MX_StockPick/SKILL.md
+skills/MX_Skills/
+├── SKILL.md                      # 主技能定义
+└── references/
+    ├── finsearch.md              # 金融资讯搜索详细指南
+    ├── findata.md                # 金融数据查询详细指南
+    ├── macro.md                  # 宏观数据查询详细指南
+    └── stockpick.md              # 选股选基金详细指南
 ```
 
 ## 输出文件说明
