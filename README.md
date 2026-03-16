@@ -18,14 +18,15 @@
 #### 方式一：OpenClaw Skill
 
 ```bash
-# 1. 克隆项目
+# 1. 克隆项目并进入目录
 git clone https://github.com/IanLiYi1996/east-money-skills.git
+cd east-money-skills
 
 # 2. 安装 Python 依赖
-pip install ./east-money-skills
+pip install .
 
 # 3. 将技能目录链接到 OpenClaw skills 目录
-ln -s "$(pwd)/east-money-skills/skills/MX_Skills" ~/.openclaw/skills/MX_Skills
+ln -s "$(pwd)/skills/MX_Skills" ~/.openclaw/skills/MX_Skills
 
 # 4. 配置 API Key（从 https://ai.eastmoney.com/chat 获取）
 export EM_API_KEY="your_em_api_key"
