@@ -6,6 +6,7 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
 authors = [{ name = "IanLiYi1996" }]
+dependencies = ["httpx>=0.24"]
 
 [project.urls]
 Homepage = "https://github.com/IanLiYi1996/east-money-skills"
@@ -13,11 +14,12 @@ Homepage = "https://github.com/IanLiYi1996/east-money-skills"
 [project.scripts]
 mx-skills = "mx_skills.cli:main"
 
-dependencies = ["httpx>=0.24"]
-
 [project.optional-dependencies]
 excel = ["pandas>=1.5", "openpyxl>=3.0"]
 all = ["pandas>=1.5", "openpyxl>=3.0"]
+
+[tool.setuptools.packages.find]
+include = ["mx_skills*"]
 
 [build-system]
 requires = ["setuptools>=68.0"]
