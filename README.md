@@ -15,7 +15,47 @@
 
 ### 1. 安装
 
-#### 方式一：Claude Code Skill（推荐）
+#### 方式一：OpenClaw Skill
+
+**1.1 下载技能包**
+
+访问 [妙想 Claw Skills 下载页](https://ai.eastmoney.com/mxClaw)，下载 ZIP 压缩包并解压，将解压后的文件移动到 OpenClaw Skills 目录：
+
+```bash
+# Linux / macOS
+cp -r MX_Skills /your_path_to_openclaw/skills/
+
+# Windows
+# 将解压后的 MX_Skills 文件夹复制到 \your_path_to_openclaw\skills\
+```
+
+> 如已有旧版本，请确保覆盖原有目录，且目录权限为当前用户可读写。
+
+**1.2 申请 API Key**
+
+在技能包下载页面复制生成的 API Key（格式如 `9y2t0/xxxxxxxxx`）。
+
+**1.3 配置 API Key**
+
+在 `.skills/MX_FinData/scripts/get_data.py` 中填入：
+
+```python
+EM_API_KEY = "你的API Key"
+```
+
+**1.4 启动 OpenClaw**
+
+```bash
+# 启动网关服务
+openclaw gateway start
+
+# 打开 WebUI
+openclaw dashboard
+```
+
+启动成功后，可在 OpenClaw 原生 WebUI 或妙想 Claw 对话框中使用全套 MX Skills 功能。
+
+#### 方式二：Claude Code Skill
 
 ```bash
 # 注册 marketplace（只需一次）
@@ -25,7 +65,14 @@ claude plugin marketplace add IanLiYi1996/east-money-skills
 claude plugin install MX_Skills@east-money-skills
 ```
 
-安装后在 Claude Code 中提到股票、选股、研报、宏观数据等金融话题时，技能会自动触发。
+安装后在 Claude Code 中提到股票、选股、研报、宏观数据等金融话题时，技能会自动触发。也可通过 `/MX_Skills:MX_Skills` 手动调用：
+
+```
+/MX_Skills:MX_Skills finsearch 查询贵州茅台最近的公告
+/MX_Skills:MX_Skills findata 宁德时代近一年营收
+/MX_Skills:MX_Skills macro 中国2023-2025年GDP
+/MX_Skills:MX_Skills stockpick --type A股 半导体市值前20
+```
 
 #### 方式二：pip 安装（独立使用）
 
