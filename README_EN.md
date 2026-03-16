@@ -13,11 +13,23 @@ A collection of financial data skills powered by **East Money MiaoXiang AI API**
 
 ## Quick Start
 
-```bash
-# Install
-pip install git+https://github.com/IanLiYi1996/east-money-skills.git
+### Install as Claude Code Skill (Recommended)
 
-# Configure API Key (get it from https://ai.eastmoney.com/chat)
+```bash
+claude plugin marketplace add IanLiYi1996/east-money-skills
+claude plugin install MX_Skills@east-money-skills
+```
+
+### Or install via pip
+
+```bash
+pip install git+https://github.com/IanLiYi1996/east-money-skills.git
+```
+
+### Configure
+
+```bash
+# Get your API key from https://ai.eastmoney.com/chat
 export EM_API_KEY="your_em_api_key"
 
 # Search financial news

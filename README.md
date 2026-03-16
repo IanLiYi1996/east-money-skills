@@ -15,6 +15,20 @@
 
 ### 1. 安装
 
+#### 方式一：Claude Code Skill（推荐）
+
+```bash
+# 注册 marketplace（只需一次）
+claude plugin marketplace add IanLiYi1996/east-money-skills
+
+# 安装 skill
+claude plugin install MX_Skills@east-money-skills
+```
+
+安装后在 Claude Code 中提到股票、选股、研报、宏观数据等金融话题时，技能会自动触发。
+
+#### 方式二：pip 安装（独立使用）
+
 ```bash
 # 基础安装（finsearch、macrodata、stockpick 可用）
 pip install git+https://github.com/IanLiYi1996/east-money-skills.git
