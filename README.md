@@ -17,43 +17,31 @@
 
 #### 方式一：OpenClaw Skill
 
-**1.1 下载技能包**
-
-访问 [妙想 Claw Skills 下载页](https://ai.eastmoney.com/mxClaw)，下载 ZIP 压缩包并解压，将解压后的文件移动到 OpenClaw Skills 目录：
-
 ```bash
-# Linux / macOS
-cp -r MX_Skills /your_path_to_openclaw/skills/
+# 1. 克隆项目
+git clone https://github.com/IanLiYi1996/east-money-skills.git
 
-# Windows
-# 将解压后的 MX_Skills 文件夹复制到 \your_path_to_openclaw\skills\
+# 2. 安装 Python 依赖
+pip install ./east-money-skills
+
+# 3. 将技能目录链接到 OpenClaw skills 目录
+ln -s "$(pwd)/east-money-skills/skills/MX_Skills" ~/.openclaw/skills/MX_Skills
+
+# 4. 配置 API Key（从 https://ai.eastmoney.com/chat 获取）
+export EM_API_KEY="your_em_api_key"
+
+# 5. 验证安装
+openclaw skills list   # 应能看到 MX_Skills
 ```
 
-> 如已有旧版本，请确保覆盖原有目录，且目录权限为当前用户可读写。
-
-**1.2 申请 API Key**
-
-在技能包下载页面复制生成的 API Key（格式如 `9y2t0/xxxxxxxxx`）。
-
-**1.3 配置 API Key**
-
-在 `.skills/MX_FinData/scripts/get_data.py` 中填入：
-
-```python
-EM_API_KEY = "你的API Key"
-```
-
-**1.4 启动 OpenClaw**
+安装完成后，启动 OpenClaw 即可使用：
 
 ```bash
-# 启动网关服务
 openclaw gateway start
-
-# 打开 WebUI
 openclaw dashboard
 ```
 
-启动成功后，可在 OpenClaw 原生 WebUI 或妙想 Claw 对话框中使用全套 MX Skills 功能。
+在 OpenClaw 对话中提到股票、选股、研报、宏观数据等金融话题时，技能会自动激活。
 
 #### 方式二：Claude Code Skill
 
@@ -74,7 +62,7 @@ claude plugin install MX_Skills@east-money-skills
 /MX_Skills:MX_Skills stockpick --type A股 半导体市值前20
 ```
 
-#### 方式二：pip 安装（独立使用）
+#### 方式三：pip 安装（独立使用）
 
 ```bash
 # 基础安装（finsearch、macrodata、stockpick 可用）
